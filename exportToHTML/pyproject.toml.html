@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>pyproject.toml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #ebebeb;}
+.s1 { color: #ed864a;}
+.s2 { color: #54b33e;}
+</style>
+</head>
+<body bgcolor="#131314">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+pyproject.toml</font>
+</center></td></tr></table>
+<pre><span class="s0">[</span><span class="s1">project</span><span class="s0">]</span>
+<span class="s1">name </span><span class="s0">= </span><span class="s2">&quot;main&quot;</span>
+<span class="s1">version </span><span class="s0">= </span><span class="s2">&quot;0.1.0&quot;</span>
+<span class="s1">description </span><span class="s0">= </span><span class="s2">&quot;&quot;</span>
+<span class="s1">authors </span><span class="s0">= [</span>
+    <span class="s0">{</span><span class="s1">name </span><span class="s0">= </span><span class="s2">&quot;Your Name&quot;</span><span class="s0">,</span><span class="s1">email </span><span class="s0">= </span><span class="s2">&quot;you@example.com&quot;</span><span class="s0">}</span>
+<span class="s0">]</span>
+<span class="s1">requires-python </span><span class="s0">= </span><span class="s2">&quot;&gt;=3.13&quot;</span>
+<span class="s1">dependencies </span><span class="s0">= [</span>
+<span class="s0">]</span>
+
+
+<span class="s0">[</span><span class="s1">build-system</span><span class="s0">]</span>
+<span class="s1">requires </span><span class="s0">= [</span><span class="s2">&quot;poetry-core&gt;=2.0.0,&lt;3.0.0&quot;</span><span class="s0">]</span>
+<span class="s1">build-backend </span><span class="s0">= </span><span class="s2">&quot;poetry.core.masonry.api&quot;</span>
+
+<span class="s0">[[</span><span class="s1">tool</span><span class="s0">.</span><span class="s1">poetry</span><span class="s0">.</span><span class="s1">source</span><span class="s0">]]</span>
+<span class="s1">name </span><span class="s0">= </span><span class="s2">&quot;pypi-mirror&quot;</span>
+<span class="s1">url </span><span class="s0">= </span><span class="s2">&quot;https://pypi.org/simple/&quot;</span>
+<span class="s1">priority </span><span class="s0">= </span><span class="s2">&quot;primary&quot;</span>
+
+
+<span class="s0">[</span><span class="s1">dependency-groups</span><span class="s0">]</span>
+<span class="s1">dev </span><span class="s0">= [</span>
+    <span class="s2">&quot;requests (&gt;=2.33.1,&lt;3.0.0)&quot;</span><span class="s0">,</span>
+    <span class="s2">&quot;flake8 (&gt;=7.3.0,&lt;8.0.0)&quot;</span>
+<span class="s0">]</span>
+</pre>
+</body>
+</html>
