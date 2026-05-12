@@ -19,3 +19,16 @@ def mask_account_card(card_string: str) -> str:
         masked = get_mask_card_number(number)
 
     return f"{card_type} {masked}"
+
+
+
+
+
+def get_date(date_string: str) -> str:
+    """
+    Преобразует строку даты в формат ДД.ММ.ГГГГ.
+    Пример: '2024-03-11T02:26:18.671407' -> '11.03.2024'
+    """
+    # datetime.fromisoformat() автоматически понимает формат ISO 8601
+    dt = datetime.fromisoformat(date_string)
+    return dt.strftime("%d.%m.%Y")
