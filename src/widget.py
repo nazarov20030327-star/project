@@ -32,3 +32,92 @@ def get_date(date_string: str) -> str:
     # datetime.fromisoformat() автоматически понимает формат ISO 8601
     dt = datetime.fromisoformat(date_string)
     return dt.strftime("%d.%m.%Y")
+
+
+from datetime import datetime
+
+from src.masks import get_mask_card_number, get_mask_account
+
+
+def mask_account_card(card_string: str) -> str:
+    parts = card_string.split()
+    number = parts[-1]
+    card_type = " ".join(parts[:-1])
+
+    if card_type.lower() == "счет":
+        masked = get_mask_account(number)
+    else:
+        masked = get_mask_card_number(number)
+
+    return f"{card_type} {masked}"
+
+
+def get_date(date_string: str) -> str:
+    dt = datetime.fromisoformat(date_string)
+    return dt.strftime("%d.%m.%Y")
+
+
+from datetime import datetime
+from src.masks import get_mask_card_number, get_mask_account
+
+
+def mask_account_card(card_string: str) -> str:
+    parts = card_string.split()
+    number = parts[-1]
+    card_type = " ".join(parts[:-1])
+
+    if card_type.lower() == "счет":
+        masked = get_mask_account(number)
+    else:
+        masked = get_mask_card_number(number)
+
+    return f"{card_type} {masked}"
+
+
+def get_date(date_string: str) -> str:
+    dt = datetime.fromisoformat(date_string)
+    return dt.strftime("%d.%m.%Y")
+
+
+from datetime import datetime
+from src.masks import get_mask_card_number, get_mask_account
+
+
+def mask_account_card(card_string: str) -> str:
+    parts = card_string.split()
+    number = parts[-1]
+    card_type = " ".join(parts[:-1])
+
+    if card_type.lower() == "счет":
+        masked = get_mask_account(number)
+    else:
+        masked = get_mask_card_number(number)
+
+    return f"{card_type} {masked}"
+
+
+def get_date(date_string: str) -> str:
+    dt = datetime.fromisoformat(date_string)
+    return dt.strftime("%d.%m.%Y")
+
+
+from datetime import datetime
+from src.masks import get_mask_card_number, get_mask_account
+
+
+def mask_account_card(card_string: str) -> str:
+    parts = card_string.split()
+    number = parts[-1]
+    card_type = " ".join(parts[:-1])
+
+    if card_type.lower() == "счет":
+        masked = get_mask_account(number)
+    else:
+        masked = get_mask_card_number(number)
+
+    return f"{card_type} {masked}"
+
+
+def get_date(date_string: str) -> str:
+    dt = datetime.fromisoformat(date_string)
+    return dt.strftime("%d.%m.%Y")
