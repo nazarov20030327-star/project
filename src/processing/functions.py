@@ -3,7 +3,7 @@
 from datetime import datetime
 
 
-def filter_by_state(data: list, state: str = 'EXECUTED') -> list:
+def filter_by_state(data: list, state: str = "EXECUTED") -> list:
     """
     Фильтрует список операций по заданному статусу.
 
@@ -17,10 +17,7 @@ def filter_by_state(data: list, state: str = 'EXECUTED') -> list:
     if not data:
         return []
 
-    return [
-        item for item in data
-        if item.get('state') == state
-    ]
+    return [item for item in data if item.get("state") == state]
 
 
 def sort_by_date(data: list, reverse: bool = True) -> list:
@@ -39,7 +36,7 @@ def sort_by_date(data: list, reverse: bool = True) -> list:
         return []
 
     def get_date_key(item: dict) -> datetime:
-        date_str = item.get('date')
+        date_str = item.get("date")
         if date_str:
             return datetime.fromisoformat(date_str)
         return datetime.min
@@ -49,26 +46,10 @@ def sort_by_date(data: list, reverse: bool = True) -> list:
 
 if __name__ == "__main__":
     operations = [
-        {
-            'id': 414288290,
-            'state': 'EXECUTED',
-            'date': '2019-07-03T18:35:29.512364'
-        },
-        {
-            'id': 939719570,
-            'state': 'EXECUTED',
-            'date': '2018-06-30T02:08:58.425572'
-        },
-        {
-            'id': 594226727,
-            'state': 'CANCELED',
-            'date': '2018-09-12T21:27:25.241689'
-        },
-        {
-            'id': 615064591,
-            'state': 'CANCELED',
-            'date': '2018-10-14T08:21:33.419441'
-        }
+        {"id": 414288290, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
+        {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
+        {"id": 594226727, "state": "CANCELED", "date": "2018-09-12T21:27:25.241689"},
+        {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
     ]
 
     print("--- Тест filter_by_state ---")
@@ -76,7 +57,7 @@ if __name__ == "__main__":
     print(f"Найдено EXECUTED: {len(executed)} шт.")
     print(executed)
 
-    canceled = filter_by_state(operations, 'CANCELED')
+    canceled = filter_by_state(operations, "CANCELED")
     print(f"\nНайдено CANCELED: {len(canceled)} шт.")
     print(canceled)
 
