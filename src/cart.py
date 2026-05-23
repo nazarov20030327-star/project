@@ -2,12 +2,7 @@
 cart = ["apple", "bread", "milk", "apple", "chocolate"]
 
 # Словарь с ценами (цена за 1 штуку)
-prices = {
-    "apple": 50,
-    "bread": 30,
-    "milk": 80,
-    "chocolate": 120
-}
+prices = {"apple": 50, "bread": 30, "milk": 80, "chocolate": 120}
 total_price = 0
 seen_items: dict[str, int] = {}
 

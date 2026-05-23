@@ -1,9 +1,9 @@
 [project]
-name = "main"
+name = "project"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "Your Name",email = "you@example.com"}
+    { name = "Your Name", email = "you@example.com" }
 ]
 requires-python = ">=3.13"
 dependencies = [
@@ -40,12 +40,12 @@ lint = [
 
 
 [tool.black]
-line-length = 88
+line-length = 119
 target-version = ['py313']
 
 [tool.isort]
 profile = "black"
-line_length = 88
+line_length = 119
 
 [tool.mypy]
 python_version = "3.13"
