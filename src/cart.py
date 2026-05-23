@@ -9,23 +9,17 @@ prices = {
     "chocolate": 120
 }
 total_price = 0
-seen_items = {}
+seen_items: dict[str, int] = {}
 
 for item in cart:
     if item in seen_items:
         seen_items[item] += 1
     else:
         seen_items[item] = 1
-    #проверяем какой по счету товар
+    # проверяем какой по счету товар
     if seen_items[item] == 1:
         total_price += prices[item]
     else:
-        total_price += prices[item]/2
+        total_price += prices[item] // 2
 
 print(total_price)
-
-
-
-
-
-
