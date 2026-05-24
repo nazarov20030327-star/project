@@ -1,5 +1,8 @@
 from datetime import datetime
-from masks import get_mask_card_number, get_mask_account
+
+from masks import get_mask_account, get_mask_card_number
+
+
 def mask_account_card(card_string: str) -> str:
     """
     Маскирует номер карты или счёта из одной строки.
@@ -10,12 +13,10 @@ def mask_account_card(card_string: str) -> str:
     parts = card_string.split()
     number = parts[-1]  # Последний элемент всегда номер
     card_type = " ".join(parts[:-1])  # Всё остальное - тип
-
     if card_type.lower() == "счет":
         masked = get_mask_account(number)
     else:
         masked = get_mask_card_number(number)
-
     return f"{card_type} {masked}"
 
 
